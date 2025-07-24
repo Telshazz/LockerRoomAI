@@ -1,4 +1,5 @@
 import React from 'react';
+// TODO: replace with Tailwind
 import '../Styles/Player.css';
 
 const bgColor = 'lightgray';

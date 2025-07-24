@@ -1,63 +1,106 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
+node_modules/
+*/node_modules/
+**/node_modules/
 
-# IDE files
-.idea
-.vscode
+# Next.js build output
+.next/
+*/.next/
+**/.next/
+out/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Production builds
+build/
+dist/
 
-# testing
-/coverage
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# local env files
-.env*.local
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# vercel
-.vercel
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
 
-# cypress
-cypress/screenshots
-cypress/videos
+# nyc test coverage
+.nyc_output
 
-cache
-docker-compose.yaml
-*.db
-*.db-shm
-*.db-wal
-public/*.js
-!.env.test.local
+# Dependency directories
+jspm_packages/
 
-# Ignores compiled js files
-scripts/data/*.js
-scripts/*.js
-Modules/*.js
-tsconfig2.tsbuildinfo
-tsconfig3.tsbuildinfo
-scripts/data
-scripts/data.ts
+# Optional npm cache directory
+.npm
 
-# Ignores downloaded pictures
-players
+# Optional eslint cache
+.eslintcache
 
-# Ignore the revalidate page
-revalidate
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js cache
+.next/
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# TypeScript
+*.tsbuildinfo
+
+# Cursor AI
+.cursor/ 
