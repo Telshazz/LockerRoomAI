@@ -1,0 +1,205 @@
+{
+  "userLeagues": [
+    {
+      "leagueId": "league_001",
+      "name": "Championship Dynasty",
+      "platform": "Sleeper",
+      "season": 2024,
+      "status": "IN_SEASON",
+      "week": 12,
+      "teamName": "AI Masterminds",
+      "record": {
+        "wins": 8,
+        "losses": 3,
+        "ties": 0
+      },
+      "standing": 2,
+      "totalTeams": 12,
+      "pointsFor": 1456.8,
+      "pointsAgainst": 1298.4,
+      "playoffPosition": "LOCKED",
+      "nextMatchup": {
+        "opponent": "Thunder Bolts",
+        "projectedScore": 124.6,
+        "opponentProjected": 118.2,
+        "winProbability": 67
+      },
+      "recentActivity": [
+        {
+          "type": "TRADE_COMPLETED",
+          "description": "Traded Courtland Sutton for Tony Pollard",
+          "timestamp": "2024-11-18T15:30:00Z"
+        },
+        {
+          "type": "WAIVER_CLAIM",
+          "description": "Claimed Jayden Reed",
+          "timestamp": "2024-11-16T09:00:00Z"
+        }
+      ],
+      "aiInsights": {
+        "weeklyAdvice": "Start Josh Allen and Christian McCaffrey with confidence",
+        "tradeOpportunities": 2,
+        "rosterStrength": "STRONG",
+        "playoffOutlook": "FAVORABLE"
+      }
+    },
+    {
+      "leagueId": "league_002", 
+      "name": "Redraft Legends",
+      "platform": "ESPN",
+      "season": 2024,
+      "status": "IN_SEASON",
+      "week": 12,
+      "teamName": "LockerRoom Elite",
+      "record": {
+        "wins": 6,
+        "losses": 5,
+        "ties": 0
+      },
+      "standing": 6,
+      "totalTeams": 10,
+      "pointsFor": 1234.2,
+      "pointsAgainst": 1267.8,
+      "playoffPosition": "BUBBLE",
+      "nextMatchup": {
+        "opponent": "Fantasy Phenoms",
+        "projectedScore": 118.4,
+        "opponentProjected": 121.8,
+        "winProbability": 43
+      },
+      "recentActivity": [
+        {
+          "type": "LINEUP_SET",
+          "description": "Updated Week 12 lineup",
+          "timestamp": "2024-11-19T10:15:00Z"
+        }
+      ],
+      "aiInsights": {
+        "weeklyAdvice": "Must-win week - consider high-upside plays",
+        "tradeOpportunities": 0,
+        "rosterStrength": "AVERAGE",
+        "playoffOutlook": "UNCERTAIN"
+      }
+    },
+    {
+      "leagueId": "league_003",
+      "name": "Best Ball Bonanza", 
+      "platform": "Underdog",
+      "season": 2024,
+      "status": "IN_SEASON",
+      "week": 12,
+      "teamName": "Draft Kings",
+      "record": {
+        "wins": 9,
+        "losses": 2,
+        "ties": 0
+      },
+      "standing": 1,
+      "totalTeams": 12,
+      "pointsFor": 1589.6,
+      "pointsAgainst": 1156.2,
+      "playoffPosition": "LOCKED",
+      "nextMatchup": {
+        "opponent": "Auto-Generated",
+        "projectedScore": 142.8,
+        "opponentProjected": 128.4,
+        "winProbability": 78
+      },
+      "recentActivity": [
+        {
+          "type": "BEST_BALL_UPDATE",
+          "description": "Optimal lineup auto-generated",
+          "timestamp": "2024-11-19T08:00:00Z"
+        }
+      ],
+      "aiInsights": {
+        "weeklyAdvice": "Roster performing optimally - no action needed",
+        "tradeOpportunities": 0,
+        "rosterStrength": "ELITE",
+        "playoffOutlook": "CHAMPIONSHIP_CONTENDER"
+      }
+    },
+    {
+      "leagueId": "league_004",
+      "name": "Work League Fun",
+      "platform": "Yahoo",
+      "season": 2024,
+      "status": "IN_SEASON", 
+      "week": 12,
+      "teamName": "Office Heroes",
+      "record": {
+        "wins": 4,
+        "losses": 7,
+        "ties": 0
+      },
+      "standing": 9,
+      "totalTeams": 12,
+      "pointsFor": 1098.4,
+      "pointsAgainst": 1345.6,
+      "playoffPosition": "ELIMINATED",
+      "nextMatchup": {
+        "opponent": "Casual Crushers",
+        "projectedScore": 98.2,
+        "opponentProjected": 105.6,
+        "winProbability": 38
+      },
+      "recentActivity": [
+        {
+          "type": "PLAYER_DROPPED",
+          "description": "Dropped injured player to waivers",
+          "timestamp": "2024-11-17T14:20:00Z"
+        }
+      ],
+      "aiInsights": {
+        "weeklyAdvice": "Focus on spoiler role and development",
+        "tradeOpportunities": 1,
+        "rosterStrength": "WEAK",
+        "playoffOutlook": "ELIMINATED"
+      }
+    }
+  ],
+  "aggregateStats": {
+    "totalLeagues": 4,
+    "totalWins": 27,
+    "totalLosses": 17,
+    "winPercentage": 61.4,
+    "averageStanding": 4.5,
+    "playoffTeams": 2,
+    "championshipContenders": 1,
+    "totalPointsFor": 5378.0,
+    "weeklyProjection": 483.0
+  },
+  "crossLeagueInsights": {
+    "topPerformers": [
+      {
+        "leagueId": "league_003",
+        "metric": "Points Per Game",
+        "value": 144.5,
+        "rank": 1
+      },
+      {
+        "leagueId": "league_001", 
+        "metric": "Win Percentage",
+        "value": 72.7,
+        "rank": 1
+      }
+    ],
+    "improvementAreas": [
+      {
+        "leagueId": "league_004",
+        "issue": "Inconsistent scoring",
+        "recommendation": "Target consistent floor players"
+      },
+      {
+        "leagueId": "league_002",
+        "issue": "Playoff bubble",
+        "recommendation": "Make aggressive moves for upside"
+      }
+    ],
+    "aiRecommendations": [
+      "Consider trading depth in League 1 for upgrades in League 2",
+      "League 3 roster is championship-caliber - stay the course",
+      "League 4 is eliminated - use as trade partner for other leagues"
+    ]
+  }
+}

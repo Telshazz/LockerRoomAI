@@ -1,124 +1,156 @@
 'use client';
 
-import { Brain, Scale, TrendingUp, Users, Zap, Trophy, Calendar, Settings } from 'lucide-react';
+import { Brain, Scale, TrendingUp, Users, Zap, Trophy, Calendar, Settings, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full">
-              <Brain className="h-12 w-12 text-white" />
+      <section className="relative py-20 px-6 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-locker-texture opacity-5"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-secondary-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-accent-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-2000"></div>
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="p-6 bg-locker-gradient rounded-full shadow-2xl">
+              <Brain className="h-16 w-16 text-white" />
             </div>
-          </div>
+          </motion.div>
           
-          <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-7xl font-bold bg-locker-gradient bg-clip-text text-transparent mb-8"
+          >
             LockerRoom AI
-          </h1>
+          </motion.h1>
           
-          <p className="text-2xl text-gray-600 dark:text-gray-300 mb-4">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-3xl text-gray-600 mb-6"
+          >
             The Ultimate Fantasy Football Platform
-          </p>
+          </motion.p>
           
-          <p className="text-lg text-gray-500 dark:text-gray-400 max-w-3xl mx-auto mb-12">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="text-xl text-gray-500 max-w-4xl mx-auto mb-12"
+          >
             AI-powered assistants, advanced commissioner tools, real-time scoring, and intelligent features 
             that go beyond traditional fantasy football. Built for the modern fantasy manager.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Link href="/ai/start-sit-coach" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              Try AI Coach
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-wrap justify-center gap-6 mb-16"
+          >
+            <Link href="/ai/start-sit-coach">
+              <Button className="locker-button text-lg px-8 py-4">
+                <Brain className="h-5 w-5 mr-2" />
+                Try AI Coach
+              </Button>
             </Link>
-            <Link href="/dashboard" className="border border-gray-300 hover:bg-gray-50 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              View Dashboard
+            <Link href="/dashboard">
+              <Button variant="outline" className="text-lg px-8 py-4 border-2 hover:bg-gray-50">
+                <BarChart3 className="h-5 w-5 mr-2" />
+                View Dashboard
+              </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* AI Features Section */}
-      <section className="py-20 px-6 bg-white/50 dark:bg-slate-800/50">
+      <section className="py-20 px-6 bg-white/70 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🤖 AI-Powered Assistants</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6">🤖 AI-Powered Assistants</h2>
+            <p className="text-2xl text-gray-600">
               Our core differentiators that set us apart from Sleeper, ESPN, and Yahoo
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <Brain className="h-8 w-8 text-blue-600 mr-3" />
-                <h3 className="text-xl font-semibold">AI Start/Sit Coach</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Personalized recommendations based on matchups, weather, trends, and game scripts. No betting factors.
-              </p>
-              <Link href="/ai/start-sit-coach" className="text-blue-600 hover:text-blue-700 font-medium">
-                Try it now →
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <Scale className="h-8 w-8 text-purple-600 mr-3" />
-                <h3 className="text-xl font-semibold">AI Trade Evaluator</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Fairness index, veto risk analysis, and market evaluation to ensure balanced trades.
-              </p>
-              <Link href="/ai/trade-evaluator" className="text-purple-600 hover:text-purple-700 font-medium">
-                Analyze trades →
-              </Link>
-            </div>
-
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <TrendingUp className="h-8 w-8 text-green-600 mr-3" />
-                <h3 className="text-xl font-semibold">Draft Copilot</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Real-time draft assistance with exposure tracking and value-over-replacement insights.
-              </p>
-              <span className="text-green-600 font-medium">Coming soon</span>
-            </div>
-
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <Zap className="h-8 w-8 text-yellow-600 mr-3" />
-                <h3 className="text-xl font-semibold">Waiver Optimizer</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Personalized FAAB recommendations and waiver wire analysis for your roster.
-              </p>
-              <span className="text-yellow-600 font-medium">Coming soon</span>
-            </div>
-
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <Users className="h-8 w-8 text-red-600 mr-3" />
-                <h3 className="text-xl font-semibold">Locker Room Chatbot</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Powered by Grok for league chat, trash talk, and loser task reminders.
-              </p>
-              <span className="text-red-600 font-medium">Coming soon</span>
-            </div>
-
-            <div className="bg-white dark:bg-slate-900 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-slate-700">
-              <div className="flex items-center mb-4">
-                <Trophy className="h-8 w-8 text-indigo-600 mr-3" />
-                <h3 className="text-xl font-semibold">Voice Recap</h3>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Weekly podcast-style summaries with ElevenLabs voice technology.
-              </p>
-              <span className="text-indigo-600 font-medium">Coming soon</span>
-            </div>
+            {[
+              {
+                icon: Brain,
+                title: "AI Start/Sit Coach",
+                description: "Personalized recommendations based on matchups, weather, trends, and game scripts. No betting factors.",
+                href: "/ai/start-sit-coach",
+                color: "from-blue-500 to-blue-600",
+                bgColor: "from-blue-50 to-blue-100"
+              },
+              {
+                icon: Scale,
+                title: "AI Trade Evaluator", 
+                description: "Fairness index, veto risk analysis, and market evaluation to ensure balanced trades.",
+                href: "/ai/trade-evaluator",
+                color: "from-purple-500 to-purple-600",
+                bgColor: "from-purple-50 to-purple-100"
+              },
+              {
+                icon: Trophy,
+                title: "Live Draft Board",
+                description: "Real-time draft assistance with AI copilot, exposure tracking, and value insights.",
+                href: "/draft/live",
+                color: "from-green-500 to-green-600",
+                bgColor: "from-green-50 to-green-100"
+              }
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                className="group"
+              >
+                <Link href={feature.href}>
+                  <Card className="immersive-card h-full">
+                    <CardHeader className={`bg-gradient-to-r ${feature.bgColor} group-hover:from-opacity-80 group-hover:to-opacity-80 transition-all duration-300`}>
+                      <div className="flex items-center space-x-3">
+                        <div className={`p-3 bg-gradient-to-r ${feature.color} rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                          <feature.icon className="h-6 w-6 text-white" />
+                        </div>
+                        <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-6">
+                      <p className="text-gray-600 mb-4">{feature.description}</p>
+                      <div className="flex items-center text-primary-600 font-medium group-hover:text-primary-700 transition-colors">
+                        <span>Try it now</span>
+                        <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -126,60 +158,131 @@ export default function HomePage() {
       {/* Features Overview */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">🏆 Advanced Features</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold mb-6">🏆 Advanced Features</h2>
+            <p className="text-2xl text-gray-600">
               Everything you need for the ultimate fantasy football experience
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 flex items-center">
-                <Calendar className="h-6 w-6 mr-2 text-blue-600" />
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl font-semibold mb-6 flex items-center">
+                <Calendar className="h-8 w-8 mr-3 text-blue-600" />
                 League Types
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Redraft, Dynasty, Keeper, Best-Ball</li>
-                <li>• Vampire, Guillotine, Survivor, Playoff-only</li>
-                <li>• Superflex, IDP, Devy, Taxi squad</li>
-                <li>• Custom scoring events & roster rules</li>
+              <ul className="space-y-3 text-lg text-gray-600">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Redraft, Dynasty, Keeper, Best-Ball
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Vampire, Guillotine, Survivor, Playoff-only
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Superflex, IDP, Devy, Taxi squad
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Custom scoring events & roster rules
+                </li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 flex items-center">
-                <Settings className="h-6 w-6 mr-2 text-purple-600" />
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl font-semibold mb-6 flex items-center">
+                <Settings className="h-8 w-8 mr-3 text-purple-600" />
                 Commissioner Tools
               </h3>
-              <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-                <li>• Ultra-flex rule builder</li>
-                <li>• Escrow & payout wallet</li>
-                <li>• ML collusion detection</li>
-                <li>• Full audit logs & undo stack</li>
+              <ul className="space-y-3 text-lg text-gray-600">
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Ultra-flex rule builder
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Escrow & payout wallet
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  ML collusion detection
+                </li>
+                <li className="flex items-center">
+                  <CheckCircle className="h-5 w-5 mr-3 text-success-500" />
+                  Full audit logs & undo stack
+                </li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Experience the Future?</h2>
-          <p className="text-xl mb-8 opacity-90">
+      <section className="py-20 px-6 bg-locker-gradient text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-locker-texture opacity-10"></div>
+        <div className="relative max-w-4xl mx-auto text-center">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold mb-8"
+          >
+            Ready to Experience the Future?
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-2xl mb-12 opacity-90"
+          >
             Join the next generation of fantasy football with AI-powered insights and advanced tools.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/ai/start-sit-coach" className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-              Try AI Features
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-wrap justify-center gap-6"
+          >
+            <Link href="/ai/start-sit-coach">
+              <Button className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 shadow-xl">
+                <Brain className="h-5 w-5 mr-2" />
+                Try AI Features
+              </Button>
             </Link>
-            <Link href="/dashboard" className="border border-white/30 hover:bg-white/10 px-8 py-4 rounded-lg text-lg font-semibold transition-colors">
-              View Demo
+            <Link href="/dashboard">
+              <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-4">
+                <BarChart3 className="h-5 w-5 mr-2" />
+                View Demo
+              </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-} 
+}
+
+function CheckCircle({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}

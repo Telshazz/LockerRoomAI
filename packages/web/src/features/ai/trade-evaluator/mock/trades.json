@@ -1,0 +1,142 @@
+{
+  "sampleTrade": {
+    "teamA": {
+      "players": [
+        {
+          "id": "player_trade_1",
+          "name": "Tyreek Hill",
+          "position": "WR",
+          "team": "MIA",
+          "currentValue": 85,
+          "projectedValue": 82,
+          "age": 29,
+          "injuryRisk": "LOW",
+          "recentPerformance": "Strong",
+          "seasonStats": {
+            "receptions": 78,
+            "yards": 1104,
+            "touchdowns": 8
+          }
+        },
+        {
+          "id": "player_trade_2",
+          "name": "Tony Pollard",
+          "position": "RB",
+          "team": "TEN",
+          "currentValue": 45,
+          "projectedValue": 48,
+          "age": 27,
+          "injuryRisk": "MEDIUM",
+          "recentPerformance": "Improving",
+          "seasonStats": {
+            "rushingYards": 854,
+            "receptions": 32,
+            "touchdowns": 6
+          }
+        }
+      ]
+    },
+    "teamB": {
+      "players": [
+        {
+          "id": "player_trade_3",
+          "name": "Davante Adams",
+          "position": "WR",
+          "team": "LV",
+          "currentValue": 78,
+          "projectedValue": 75,
+          "age": 31,
+          "injuryRisk": "LOW",
+          "recentPerformance": "Consistent",
+          "seasonStats": {
+            "receptions": 68,
+            "yards": 892,
+            "touchdowns": 7
+          }
+        },
+        {
+          "id": "player_trade_4",
+          "name": "Jaylen Warren",
+          "position": "RB",
+          "team": "PIT",
+          "currentValue": 35,
+          "projectedValue": 38,
+          "age": 25,
+          "injuryRisk": "LOW",
+          "recentPerformance": "Steady",
+          "seasonStats": {
+            "rushingYards": 456,
+            "receptions": 28,
+            "touchdowns": 4
+          }
+        },
+        {
+          "id": "player_trade_5",
+          "name": "2024 2nd Round Pick",
+          "position": "PICK",
+          "team": "PIT",
+          "currentValue": 25,
+          "projectedValue": 30,
+          "age": null,
+          "injuryRisk": "NONE",
+          "recentPerformance": "N/A",
+          "pickDetails": {
+            "year": 2024,
+            "round": 2,
+            "originalTeam": "PIT"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "fairnessIndex": 87,
+      "vetoRisk": "LOW",
+      "winner": "TEAM_B",
+      "reasoning": [
+        "Trade values are within 8% margin of each other",
+        "Both teams address clear positional needs",
+        "Age considerations slightly favor Team B long-term",
+        "No obvious collusion indicators detected",
+        "Draft pick adds future value for rebuilding team"
+      ],
+      "marketAnalysis": {
+        "teamAValue": 130,
+        "teamBValue": 138,
+        "valueDifference": 8,
+        "fairnessScore": 87
+      },
+      "riskFactors": [
+        "Tyreek Hill's age (29) vs Davante Adams (31)",
+        "Tony Pollard's injury history",
+        "Draft pick uncertainty"
+      ],
+      "positionalNeeds": {
+        "teamA": "Needs RB depth and future assets",
+        "teamB": "Needs WR1 upgrade and RB2"
+      }
+    }
+  },
+  "tradeHistory": [
+    {
+      "id": "trade_1",
+      "date": "2024-11-15",
+      "teams": ["Team Alpha", "Team Beta"],
+      "fairnessIndex": 92,
+      "status": "Approved"
+    },
+    {
+      "id": "trade_2", 
+      "date": "2024-11-10",
+      "teams": ["Team Gamma", "Team Delta"],
+      "fairnessIndex": 76,
+      "status": "Vetoed"
+    },
+    {
+      "id": "trade_3",
+      "date": "2024-11-08",
+      "teams": ["Team Epsilon", "Team Zeta"],
+      "fairnessIndex": 89,
+      "status": "Approved"
+    }
+  ]
+}

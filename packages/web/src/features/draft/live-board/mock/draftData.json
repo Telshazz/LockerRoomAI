@@ -1,0 +1,176 @@
+{
+  "draftInfo": {
+    "draftId": "draft_2024_001",
+    "leagueId": "league_001",
+    "season": 2024,
+    "status": "IN_PROGRESS",
+    "currentPick": 15,
+    "totalPicks": 180,
+    "currentRound": 2,
+    "totalRounds": 15,
+    "pickTimeLimit": 90,
+    "draftType": "SNAKE",
+    "scoringType": "PPR",
+    "teams": 12,
+    "currentTurn": {
+      "teamId": "team_003",
+      "teamName": "Thunder Bolts",
+      "pickNumber": 15,
+      "timeRemaining": 67
+    }
+  },
+  "draftBoard": [
+    {
+      "pickNumber": 1,
+      "round": 1,
+      "teamId": "team_001",
+      "teamName": "Dynasty Kings",
+      "playerId": "player_001",
+      "playerName": "Christian McCaffrey",
+      "position": "RB",
+      "team": "SF",
+      "timestamp": "2024-11-20T19:05:23Z"
+    },
+    {
+      "pickNumber": 2,
+      "round": 1,
+      "teamId": "team_002",
+      "teamName": "Grid Iron Giants",
+      "playerId": "player_002",
+      "playerName": "Tyreek Hill",
+      "position": "WR",
+      "team": "MIA",
+      "timestamp": "2024-11-20T19:07:45Z"
+    },
+    {
+      "pickNumber": 3,
+      "round": 1,
+      "teamId": "team_003",
+      "teamName": "Thunder Bolts",
+      "playerId": "player_003",
+      "playerName": "Josh Allen",
+      "position": "QB",
+      "team": "BUF",
+      "timestamp": "2024-11-20T19:09:12Z"
+    }
+  ],
+  "availablePlayers": [
+    {
+      "playerId": "player_101",
+      "name": "Stefon Diggs",
+      "position": "WR",
+      "team": "HOU",
+      "adp": 2.8,
+      "projectedPoints": 285.4,
+      "tier": 1,
+      "aiRecommendation": {
+        "rank": 1,
+        "confidence": 94,
+        "reasoning": "Elite target share with new QB, proven track record",
+        "valueGrade": "A+",
+        "riskLevel": "LOW"
+      }
+    },
+    {
+      "playerId": "player_102",
+      "name": "Saquon Barkley",
+      "position": "RB",
+      "team": "PHI",
+      "adp": 3.2,
+      "projectedPoints": 278.9,
+      "tier": 1,
+      "aiRecommendation": {
+        "rank": 2,
+        "confidence": 91,
+        "reasoning": "Elite offensive line, goal line touches, pass catching upside",
+        "valueGrade": "A+",
+        "riskLevel": "LOW"
+      }
+    },
+    {
+      "playerId": "player_103",
+      "name": "CeeDee Lamb",
+      "position": "WR",
+      "team": "DAL",
+      "adp": 4.1,
+      "projectedPoints": 272.6,
+      "tier": 1,
+      "aiRecommendation": {
+        "rank": 3,
+        "confidence": 89,
+        "reasoning": "WR1 target share, red zone looks, consistent QB play",
+        "valueGrade": "A",
+        "riskLevel": "LOW"
+      }
+    },
+    {
+      "playerId": "player_104",
+      "name": "Lamar Jackson",
+      "position": "QB",
+      "team": "BAL",
+      "adp": 4.8,
+      "projectedPoints": 398.2,
+      "tier": 1,
+      "aiRecommendation": {
+        "rank": 4,
+        "confidence": 87,
+        "reasoning": "Dual-threat upside, improved passing, rushing floor",
+        "valueGrade": "A",
+        "riskLevel": "MEDIUM"
+      }
+    },
+    {
+      "playerId": "player_105",
+      "name": "Derrick Henry",
+      "position": "RB",
+      "team": "BAL",
+      "adp": 5.2,
+      "projectedPoints": 245.8,
+      "tier": 2,
+      "aiRecommendation": {
+        "rank": 5,
+        "confidence": 82,
+        "reasoning": "Goal line work, improved offense, age concerns manageable",
+        "valueGrade": "A-",
+        "riskLevel": "MEDIUM"
+      }
+    }
+  ],
+  "userTeam": {
+    "teamId": "team_007",
+    "teamName": "AI Masterminds",
+    "draftPosition": 7,
+    "roster": [
+      {
+        "playerId": "player_007",
+        "name": "Ja'Marr Chase",
+        "position": "WR",
+        "team": "CIN",
+        "pickNumber": 7,
+        "round": 1
+      }
+    ],
+    "needs": ["RB", "QB", "WR"],
+    "nextPick": 18,
+    "picksRemaining": [18, 31, 42, 55, 66, 79, 90, 103, 114, 127, 138, 151, 162, 175]
+  },
+  "aiInsights": {
+    "currentRecommendation": {
+      "playerId": "player_101",
+      "reasoning": "Best available player, fills WR2 need, excellent value at this pick",
+      "alternativeOptions": ["player_102", "player_104"],
+      "riskAssessment": "Low risk, high reward pick with proven production"
+    },
+    "draftStrategy": {
+      "phase": "EARLY_ROUNDS",
+      "focus": "Best Player Available",
+      "positionPriority": ["RB", "WR", "QB"],
+      "riskTolerance": "CONSERVATIVE"
+    },
+    "exposureTracking": {
+      "highExposure": [],
+      "mediumExposure": ["WR"],
+      "lowExposure": ["RB", "QB", "TE"]
+    }
+  }
+}

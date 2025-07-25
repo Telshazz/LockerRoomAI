@@ -1,0 +1,141 @@
+{
+  "userRoster": [
+    {
+      "id": "player_1",
+      "name": "Josh Allen",
+      "position": "QB",
+      "team": "BUF",
+      "opponent": "MIA",
+      "projectedPoints": 24.8,
+      "confidence": 92,
+      "recommendation": "START",
+      "reasoning": [
+        "Elite matchup against Miami's 28th-ranked pass defense",
+        "Perfect weather conditions in Buffalo",
+        "Coming off 3 consecutive 25+ point games",
+        "High rushing upside in red zone situations"
+      ],
+      "matchupData": {
+        "defenseRank": 28,
+        "pointsAllowed": 22.4,
+        "weather": "Clear, 72°F",
+        "gameScript": "Positive"
+      }
+    },
+    {
+      "id": "player_2",
+      "name": "Christian McCaffrey",
+      "position": "RB",
+      "team": "SF",
+      "opponent": "SEA",
+      "projectedPoints": 18.2,
+      "confidence": 88,
+      "recommendation": "START",
+      "reasoning": [
+        "Workhorse role with 20+ touches expected",
+        "Seattle allows 4.8 YPC to opposing RBs",
+        "Red zone target with 8 TDs in last 6 games",
+        "No injury concerns heading into Week 12"
+      ],
+      "matchupData": {
+        "defenseRank": 18,
+        "pointsAllowed": 16.8,
+        "weather": "Dome",
+        "gameScript": "Neutral"
+      }
+    },
+    {
+      "id": "player_3",
+      "name": "Stefon Diggs",
+      "position": "WR",
+      "team": "HOU",
+      "opponent": "TEN",
+      "projectedPoints": 14.6,
+      "confidence": 75,
+      "recommendation": "START",
+      "reasoning": [
+        "WR1 target share with 28% of team targets",
+        "Tennessee allows 8.2 receptions per game to WR1s",
+        "Bounce-back spot after quiet Week 11",
+        "Strong rapport with C.J. Stroud developing"
+      ],
+      "matchupData": {
+        "defenseRank": 22,
+        "pointsAllowed": 15.2,
+        "weather": "Clear, 68°F",
+        "gameScript": "Positive"
+      }
+    },
+    {
+      "id": "player_4",
+      "name": "Courtland Sutton",
+      "position": "WR",
+      "team": "DEN",
+      "opponent": "LV",
+      "projectedPoints": 11.8,
+      "confidence": 65,
+      "recommendation": "SIT",
+      "reasoning": [
+        "Inconsistent target share in recent weeks",
+        "Las Vegas has improved pass defense at home",
+        "Weather concerns with 15+ mph winds expected",
+        "Better options available on your bench"
+      ],
+      "matchupData": {
+        "defenseRank": 12,
+        "pointsAllowed": 11.4,
+        "weather": "Windy, 15mph gusts",
+        "gameScript": "Negative"
+      }
+    },
+    {
+      "id": "player_5",
+      "name": "Travis Kelce",
+      "position": "TE",
+      "team": "KC",
+      "opponent": "PHI",
+      "projectedPoints": 13.4,
+      "confidence": 82,
+      "recommendation": "START",
+      "reasoning": [
+        "Premium TE1 with consistent target share",
+        "Philadelphia struggles against tight ends",
+        "Mahomes looks his way in red zone frequently",
+        "Playoff implications increase target volume"
+      ],
+      "matchupData": {
+        "defenseRank": 24,
+        "pointsAllowed": 12.8,
+        "weather": "Clear, 45°F",
+        "gameScript": "Positive"
+      }
+    },
+    {
+      "id": "player_6",
+      "name": "Rhamondre Stevenson",
+      "position": "RB",
+      "team": "NE",
+      "opponent": "IND",
+      "projectedPoints": 9.2,
+      "confidence": 58,
+      "recommendation": "SIT",
+      "reasoning": [
+        "Timeshare backfield limits upside",
+        "Indianapolis has stout run defense at home",
+        "Game script likely negative for Patriots",
+        "Better streaming options available"
+      ],
+      "matchupData": {
+        "defenseRank": 8,
+        "pointsAllowed": 12.1,
+        "weather": "Dome",
+        "gameScript": "Negative"
+      }
+    }
+  ],
+  "weekInfo": {
+    "week": 12,
+    "season": 2024,
+    "deadline": "2024-11-24T13:00:00Z"
+  }
+}
